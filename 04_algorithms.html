@@ -1,0 +1,173 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="color-scheme" content="dark"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04. Algorithm & Algorithmic Actions - SITE 1101 Principles of Information Systems</title><style>
+:root{color-scheme:dark}
+*{box-sizing:border-box}
+html{background:#08090b}
+body{
+  margin:0;background:radial-gradient(ellipse 120% 70% at 50% 0%,#12151c 0%,#08090b 60%);
+  color:#d7dbe4;font:17.5px/1.72 "Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  -webkit-font-smoothing:antialiased;
+}
+main,body>article,.md-content__inner{margin:0 auto;max-width:800px;padding:44px 24px 110px}
+h1,h2,h3,h4{font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:#fff;letter-spacing:-.025em;line-height:1.2}
+h1{font-size:32px;margin:6px 0 20px;font-weight:600}
+h2{font-size:23px;margin:38px 0 12px;color:#5fe3b2}
+h3{font-size:18px;margin:28px 0 10px;color:#c9c3ff}
+p{margin:0 0 17px}
+a{color:#5fe3b2;text-decoration:underline;text-decoration-thickness:1px;text-decoration-color:#5fe3b255;text-underline-offset:3px}
+a:hover{text-decoration-color:#5fe3b2}
+strong,b{color:#fff;font-weight:600}
+em,i{color:#eceef4}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.86em;background:#14171d;border:1px solid #232833;border-radius:5px;padding:1px 5px;color:#a8e8cd}
+pre{background:#050609;border:1px solid #1e222b;border-radius:12px;padding:16px 18px;overflow:auto;font-size:13.5px;line-height:1.6;color:#c3e6d8}
+pre code{background:none;border:0;padding:0}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:14.5px;display:block;overflow-x:auto}
+th{text-align:left;font:600 10.5px/1.4 ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:#7d8595;padding:0 16px 10px 0;border-bottom:1px solid #333947;white-space:nowrap}
+td{padding:12px 16px 12px 0;border-bottom:1px solid #1d2028;color:#b9c0cd;vertical-align:top}
+img,svg{max-width:100%;height:auto}
+img{border-radius:12px;background:#0f1218}
+ul,ol{padding-left:24px;margin:0 0 20px}
+li{margin:8px 0}
+blockquote{margin:22px 0;padding:14px 20px;border-left:2px solid #5fe3b2;background:linear-gradient(90deg,#0e1a17,#0b0d11);border-radius:0 10px 10px 0;color:#cfe6de}
+hr{border:0;border-top:1px solid #232833;margin:32px 0}
+.admonition{border:1px solid #232833;border-left:2px solid #5fe3b2;background:linear-gradient(180deg,#101519,#0c0e13);border-radius:0 12px 12px 0;padding:14px 18px;margin:22px 0}
+.admonition-title{font:600 10.5px/1.4 ui-monospace,Menlo,monospace;letter-spacing:.16em;text-transform:uppercase;color:#5fe3b2;margin:0 0 6px !important}
+details{border:1px solid #232833;border-radius:12px;padding:14px 18px;margin:16px 0;background:linear-gradient(180deg,#101319,#0c0e13)}
+summary{cursor:pointer;font:600 14.5px/1.5 ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;color:#e8ebf2}
+summary::marker{color:#5fe3b2}
+.meta-text,.twemoji{color:#79808f;font-size:12.5px;font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif}
+.twemoji svg{width:13px;height:13px;fill:#79808f;vertical-align:-2px;margin-right:6px}
+footer{border-top:1px solid #232833;margin-top:44px;padding-top:22px;color:#79808f;font-size:13.5px;font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif}
+.nav-back{display:inline-flex;align-items:center;gap:8px;margin:0 0 26px !important;font:500 12.5px/1 ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;color:#a7aebe;text-decoration:none;border:1px solid #262b35;padding:9px 13px;border-radius:9px;transition:.18s}
+.nav-back:hover{color:#fff;border-color:#3a4150;background:#141820;text-decoration:none}
+::selection{background:#5fe3b233}
+@media print{body{background:#fff;color:#111}pre{background:#f3f4f6;color:#111;border-color:#ddd}}
+</style><body><p><a class="nav-back" href="../index.html">← Learning canvas</a></p><p>Downloaded course reading • 29 October 2026 • <a href="https://ada-site.github.io/SITE-1101/notes/04_algorithms/">Live original</a></p><article class="md-content__inner md-typeset">
+<h1 id="04-algorithm-algorithmic-actions">04. Algorithm &amp; Algorithmic Actions</h1>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"></path></svg></span>
+<span class="meta-text">Nilufar Ismayilova, Ismayil Shahaliyev</span><br/>
+<span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"></path></svg></span>
+<span class="meta-text">Oct 25, 2025</span>
+  
+<span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5v-2H5V8h14v1h2V5a2 2 0 0 0-2-2m2.7 10.35-1 1-2.05-2 1-1c.2-.21.54-.22.77 0l1.28 1.28c.19.2.19.52 0 .72M12 18.94l6.07-6.06 2.05 2L14.06 21H12z"></path></svg></span>
+<span class="meta-text">Jan 30, 2026</span></p>
+<p>An <a href="https://en.wikipedia.org/wiki/Algorithm">algorithm</a> is a step-by-step procedure or set of rules to solve a specific problem or perform a task. It is like a recipe in cooking: you follow a clear sequence of actions to achieve a specific result. In computer science, algorithms receive some <em>input</em>, <em>process</em> it in a logical way, and produce an <em>output</em>. What makes a <strong>good algorithm</strong> is that it has a clear starting point, a clear ending point, and every step is unambiguous - there is no confusion about how it should be executed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Imagine you want to find the largest of three numbers: A, B, and C. A simple algorithm would say: first compare A and B. If A is greater than or equal to B, then compare A with C. If A is still the greatest, then A is the largest number. Otherwise, C is the largest. But if in the very first comparison B was already greater than A, then compare B with C, and whichever is larger is the answer. This exact set of steps can be written in code or performed by a person.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Exercise</p>
+<p>Bring an example of an algorithm from your daily life.</p>
+</div>
+<p>The word <em>algorithm</em> traces back to the name of the mathematician <a href="https://en.wikipedia.org/wiki/Al-Khwarizmi">Al-Khwarizmi</a>, whose systematic approach to calculation and problem-solving became foundational to modern mathematics and computing. Similarly, the word algebra comes from his mathematical treatise <em>Al-Jabr</em>, translated as "completion" or "rejoining".</p>
+<p><a href="https://en.wikipedia.org/wiki/Turing_Award">Turing Award</a> winner computer scientist <a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a> is best known for the book <em>The Art of Computer Programming</em>. His work helped establish <em>algorithmic analysis</em> as a discipline.</p>
+<p><a href="https://en.wikipedia.org/wiki/Computational_complexity">Computational complexity</a> of an algorithm describes how the resources an algorithm needs (e.g. time, memory, etc.) grow as the input size increases. <strong>Time complexity</strong> tracks how many computational steps are required. <strong>Space complexity</strong> tracks how much memory is used. Within these, we distinguish worst-case, average-case, and best-case behavior depending on how the input might vary. <a href="https://en.wikipedia.org/wiki/Big_O_notation">Asymptotic (Big O) notation</a> provides a language for comparing growth rates when inputs become large. Big O gives an upper bound: it states that the algorithm grows no faster than some function up to constant factors. Big O abstracts away hardware, implementation details, and constants, focusing only on how the algorithm scales with input size.</p>
+<figure class="w50">
+<img alt="A Book of Tasty Algorithms (foreword by Donald Knuth)" src="asset-3d36ad86aba5.jpg"/>
+<figcaption></figcaption>
+</figure>
+<p>Knuth also wrote a <a href="https://cs.stanford.edu/~knuth/azerbaijan.pdf">special foreword</a> publication for participants of the International Olympiad in Informatics (<a href="https://stats.ioinformatics.org/olympiads/2019">IOI 2019</a>) held in Azerbaijan. <em>A Book of Tasty Algorithms</em> is a playful recipe book based on dishes from Azerbaijani cuisine, representing algorithmic ideas through the familiar structure of cooking, drawing a parallel between writing algorithms and following recipes.</p>
+<h2 id="algorithmic-actions">Algorithmic Actions</h2>
+<p>Algorithmic actions describe the fundamental operations that make up any computer program. These actions determine how a program makes decisions, repeats steps, organizes tasks, and manages data. The five main algorithmic actions are <strong>selection</strong>, <strong>repetition</strong>, <strong>modularization</strong>, <strong>recursion</strong>, and <strong>name binding</strong>.</p>
+<h3 id="selection">Selection</h3>
+<p><em>Selection</em> means choosing between different paths of execution based on a condition. It allows the program to "decide" what to do depending on input or data values. In the pseudo-code below, if the temperature is above 30°C, the system turns on the air conditioner; otherwise, it keeps it off:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">temperature</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">turnOnAC</span><span class="p">();</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">turnOffAC</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="repetition">Repetition</h3>
+<p><em>Repetition</em> means performing the same set of instructions multiple times until a certain condition is met. This prevents code duplication and makes programs efficient. In programming (pseudo-code), printing numbers from 1 to 5 using a loop will look like:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="modularization">Modularization</h3>
+<p><em>Modularization</em> means dividing a complex program into smaller, manageable, and reusable parts, called modules. This improves readability, debugging, and reusability.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A billing program may have modules <code>calculateTax()</code> and <code>printBill()</code> for computing tax on a purchase and printing the final receipt. Here, each module performs one well-defined task, making the program organized and easier to maintain.</p>
+</div>
+<p>At a deeper level, modularization is a principle of system organization, not limited to programming. It refers to the act of decomposing any complex system - software, mechanical, social, or educational - into smaller subsystems that can be developed, understood, or replaced independently.</p>
+<p>In programming, modularization starts with <a href="https://en.wikipedia.org/wiki/Function_(computer_programming)"><strong>functions</strong></a>, which perform a single, well-defined task. Related functions can be grouped into <strong>classes</strong>, which represent objects or abstract entities. Several classes and functions together form a <strong>module</strong>, typically a single file in a programming language like Python. A <strong>package</strong> is a collection of related modules organized in a directory (folder) structure, and multiple packages can form a <strong>library</strong> or <strong>framework</strong>, representing a higher level of modular organization. At the top level, systems or applications integrate many libraries and frameworks, sometimes developed by entirely different teams or companies.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Calculator</span><span class="p">:</span>
+    <span class="n">function</span> <span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="n">function</span> <span class="n">subtract</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+</code></pre></div>
+<p>In engineering, a car is designed in modules such as the engine, transmission, and electrical system, each of which can be developed or replaced independently. In education, a curriculum may be modularized into separate courses or subjects, each focusing on a distinct domain of knowledge but contributing to an integrated learning goal. In management, an organization may be divided into departments - finance, marketing, research, operations - each acting as a module with a specific role but coordinated under one structure. In architecture, buildings are designed with modular components such as prefabricated walls or units that can be rearranged or replaced.</p>
+<p>Modularization is about <strong>complexity management</strong>: dividing a whole into parts that are independent in function and cooperative in purpose. At even higher levels, modularization can be systemic or societal. Complex infrastructures - transportation networks, communication systems, and governance structures - are modularized into interacting parts <a href="https://en.wikipedia.org/wiki/Financial_crisis_of_2007%E2%80%932008">so that local failures do not collapse the entire system</a>.</p>
+<div class="admonition success">
+<p class="admonition-title">Exercise</p>
+<p>Take a major goal of yours for the next six months and divide it into manageable modules.</p>
+</div>
+<h3 id="recursion">Recursion</h3>
+<p><em>Recursion</em> occurs when a function calls itself to solve smaller parts of the same problem. Each recursive step reduces the problem size until it reaches a <strong>base case</strong>, the simplest situation where the function stops calling itself. The base case is <strong>not</strong> the starting point, it is the stopping condition</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can imagine real-life recursion: a tree has branches, branches have smaller branches, those branches have their own smaller branches, etc. But this recursion may go infinitely and you usually need to stop at some point. That stopping condition is the base case. Let's say, after four-five branching steps a tree will stop growing any branches. With that logic, there is no base case in the case of two mirrors oppositely directed to each other. There is no base case and you will see infinite reflections. Or: <em>infinite recursion.</em></p>
+</div>
+<p>We know that the factorial of <code>n</code> is the factorial of the previous number multiplied by <code>n</code>. That means:
+<div class="highlight"><pre><span></span><code><span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">5</span>
+<span class="n">factorial</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span>
+<span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span>
+<span class="n">factorial</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span>
+</code></pre></div></p>
+<p>Or, as a general case:</p>
+<div class="highlight"><pre><span></span><code><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span>
+</code></pre></div>
+<p>We can write the following recursive function:</p>
+<div class="highlight"><pre><span></span><code><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>But this pseudo-code has an issue. It is akin to two mirrors looking at each other - it will never stop. It will return the following functions:</p>
+<div class="highlight"><pre><span></span><code><span class="n">factorial</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1</span>
+<span class="n">factorial</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">factorial</span><span class="p">(</span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="mi">-2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">-1</span>
+
+<span class="c1">// ad infinitum</span>
+</code></pre></div>
+<p>Not only <code>factorial(-1)</code> doesn't make sense, but also you will be in an infinite recursion. To fix it, you need to add a halting (stopping) condition: Base case.</p>
+<div class="highlight"><pre><span></span><code><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// base case</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// recursive call</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>So, your code will work in the following way, given that <code>n</code> is a non-negative number (in this case <code>n=4</code>): </p>
+<div class="highlight"><pre><span></span><code><span class="n">factorial</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">24.</span>
+</code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">Exercise</p>
+<p>Write a pseudo-code for recursive algorithm to find the sum of natural numbers.</p>
+</div>
+<h3 id="name-binding">Name Binding</h3>
+<p><em>Name binding</em> refers to the process of connecting <em>identifiers</em> (names) to specific objects, values, or <em>memory locations</em> in a program. It defines where and when a variable's name is linked to the data it represents. This action allows the program to store, access, and update information consistently.</p>
+<p>When a program needs to store the value <code>70</code>, it allocates memory to represent it. For example in memory cell represented with hexadecimal number <code>0x21A95BC</code>, bytes will be allocated to represent <code>70</code> in binary. Then, if you want to reuse that value in the future, you need to <strong>assign</strong> (not equalize) that value to an identifier. </p>
+<div class="highlight"><pre><span></span><code><span class="n">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">70</span>
+</code></pre></div>
+<p>The identifier speed becomes bound to the value <code>70</code> stored in memory. If later the value changes (<code>speed = 50</code>), the same name now refers to a different value, possibly stored in a different memory location.</p>
+<h2 id="dijkstras-shortest-path-algorithm">Dijkstra's Shortest Path Algorithm</h2>
+<p>In many information systems, a common task is to search for an item. In some systems, the problem involves navigating networks, such as transportation systems or computer networks, where components are connected by links with different costs, delays, or capacities. In these cases, the goal is not merely to locate an item, but to determine an <em>optimal path</em> through the network.</p>
+<p><a href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra">Edsger W. Dijkstra</a> was a Dutch computer scientist and one of the founders of modern computer science. <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra's algorithm</a> is a classic solution that computes the shortest path from a starting node to all other nodes in a <a href="https://en.wikipedia.org/wiki/Graph_%28discrete_mathematics%29">weighted graph</a> where all edge weights are non-negative. The algorithm maintains a set of nodes whose minimum distance from the start is already known. At each step, it selects the node with the smallest temporary distance, finalizes its distance, and then updates (relaxes) its neighbors by checking whether passing through this node yields a shorter path.</p>
+<figure>
+<img alt="Dijkstra's shortest path algorithm" src="asset-f4badffecab5.gif"/>
+<figcaption>
+    Dijkstra’s algorithm to find the shortest path between a and b. It picks the unvisited vertex with the lowest distance, calculates the distance through it to each unvisited neighbor, and updates the neighbor’s distance if smaller. Mark visited (set to red) when done with neighbors. By
+    <a href="https://commons.wikimedia.org/w/index.php?title=User:Ibmua&amp;action=edit&amp;redlink=1" title="User:Ibmua (page does not exist)">Ibmua</a> –
+    Work by uploader, Public Domain,
+    <a href="https://commons.wikimedia.org/w/index.php?curid=6282617">Link</a>
+</figcaption>
+</figure>
+<p>A <a href="https://en.wikipedia.org/wiki/Priority_queue">priority queue</a> is often used to efficiently select the next node with the smallest distance, which allows the algorithm to scale well for large graphs. The algorithm finishes when all nodes have been processed or when the destination node is finalized. The output is both the shortest distance and the actual path taken.</p>
+<h2 id="additional-material">Additional Material</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=rL8X2mlNHPM">Intro to Algorithms: Crash Course Computer Science #13</a></li>
+<li><a href="https://www.youtube.com/watch?v=6hfOvs8pY1k">What's an algorithm? - David J. Malan</a></li>
+<li><a href="https://www.youtube.com/embed/Mv9NEXX1VHc">What on Earth is Recursion? - Computerphile</a></li>
+<li><a href="https://www.youtube.com/embed/2SUvWfNJSsM">Binary, Hanoi and Sierpinski, part 1</a></li>
+<li><a href="https://www.youtube.com/watch?v=GazC3A4OQTE">Dijkstra's Algorithm - Computerphile</a></li>
+</ul>
+</article><footer>Original course text preserved. See study guide for clarifications and worked practice. Mathematical notation may appear in TeX form.</footer></body></html>

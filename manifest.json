@@ -1,0 +1,32 @@
+[
+  {
+    "file": "01_intro.html",
+    "source": "https://ada-site.github.io/SITE-1101/notes/01_intro/",
+    "type": "lecture notes",
+    "downloaded": "2026-10-29"
+  },
+  {
+    "file": "02_binary_logic.html",
+    "source": "https://ada-site.github.io/SITE-1101/notes/02_binary_logic/",
+    "type": "lecture notes",
+    "downloaded": "2026-10-29"
+  },
+  {
+    "file": "03_hardware.html",
+    "source": "https://ada-site.github.io/SITE-1101/notes/03_hardware/",
+    "type": "lecture notes",
+    "downloaded": "2026-10-29"
+  },
+  {
+    "file": "04_algorithms.html",
+    "source": "https://ada-site.github.io/SITE-1101/notes/04_algorithms/",
+    "type": "lecture notes",
+    "downloaded": "2026-10-29"
+  },
+  {
+    "file": "05_software.html",
+    "source": "https://ada-site.github.io/SITE-1101/notes/05_software/",
+    "type": "lecture notes",
+    "downloaded": "2026-10-29"
+  }
+]
